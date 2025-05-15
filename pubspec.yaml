@@ -1,5 +1,11 @@
 name: movie
 description: "A new Flutter project."
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -40,17 +46,13 @@ dependencies:
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.3
+
   flutter_test:
     sdk: flutter
 
 
 
-flutter_launcher_icons:
-    android: true
-    ios: true
-    image_path: "assets/logo.png"
-    adaptive_icon_background: "#FF20202D"
-    adaptive_icon_foreground: "assets/splash.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

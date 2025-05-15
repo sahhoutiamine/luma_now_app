@@ -126,19 +126,22 @@ class _MovieListScreenState extends State<MovieListScreen> {
                 ),
               ),
             ),
-            // تأثير التضبيب
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.black.withOpacity(0.7),
-                    Colors.black.withOpacity(0.3),
-                    Colors.transparent,
-                    Colors.transparent,
-                    Colors.black.withOpacity(0.7),
-                  ],
+
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                height: 400,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.transparent,
+                      Color(0xFF20202D),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -188,6 +191,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
       ),
     );
   }
+
 
   Widget _buildHorizontalMovieList(List<Movie> movies) {
     final double imageHeight = 225;

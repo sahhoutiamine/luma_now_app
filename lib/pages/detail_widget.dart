@@ -141,14 +141,14 @@ class _DetailPageState extends State<DetailPage> {
                 clipBehavior: Clip.none,
                 children: [
                   SizedBox(
-                    height: 500,
+                    height: 400,
                     width: double.infinity,
                     child: Stack(
                       children: [
                         Image.network(
                           'https://image.tmdb.org/t/p/w780${movie.backdropPath}',
                           width: double.infinity,
-                          height: 500,
+                          height: 600,
                           fit: BoxFit.cover,
                           color: Colors.black.withOpacity(0.4),
                           colorBlendMode: BlendMode.darken,
@@ -159,7 +159,7 @@ class _DetailPageState extends State<DetailPage> {
                           left: 0,
                           right: 0,
                           child: Container(
-                            height: 250,
+                            height: 500,
                             decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
