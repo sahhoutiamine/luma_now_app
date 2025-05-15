@@ -4,18 +4,11 @@ import '../services/api_service.dart';
 import 'detail_widget.dart';
 import 'category_movies_widget.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MovieListScreen(),
-    theme: ThemeData(
-      fontFamily: 'Roboto',
-      scaffoldBackgroundColor: const Color(0xFF20202D),
-    ),
-  ));
-}
+
 
 class MovieListScreen extends StatefulWidget {
+
+
   @override
   _MovieListScreenState createState() => _MovieListScreenState();
 }
@@ -454,7 +447,6 @@ class _MovieListScreenState extends State<MovieListScreen> {
   }
 }
 
-// Placeholder for MovieListScreenFavorite
 class MovieListScreenFavorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
