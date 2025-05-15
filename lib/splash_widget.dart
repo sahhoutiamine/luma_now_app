@@ -60,7 +60,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget _buildLogo() {
     try {
       return Image.asset(
-        'assets/logo.png',
+        'assets/logo_tr.png',
         width: 150,
         height: 150,
         errorBuilder: (context, error, stackTrace) => Icon(
