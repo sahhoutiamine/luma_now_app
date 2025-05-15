@@ -72,9 +72,9 @@ class _DetailPageState extends State<DetailPage> {
     bool newFavoriteStatus = !isFavorite;
 
     try {
-      if (newFavoriteStatus == true) { // إذا كنا نريد إضافة الفيلم للمفضلة
+      if (newFavoriteStatus == true) {
         print("DetailPage: محاولة إضافة الفيلم ${widget.movie.id} إلى المفضلة.");
-        await db.insertFavorite(widget.movie); // تأكد أن هذه الدالة تعمل بشكل صحيح
+        await db.insertFavorite(widget.movie);
         print("DetailPage: تم إضافة الفيلم ${widget.movie.id} بنجاح إلى المفضلة (قاعدة البيانات).");
 
         if (mounted) {
@@ -84,13 +84,13 @@ class _DetailPageState extends State<DetailPage> {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(
               content: Text("تمت إضافة الفيلم إلى المفضلة"),
-              backgroundColor: Colors.redAccent,
+              backgroundColor: Color(0xFF1A66D6),
             ),
           );
         }
       } else {
         print("DetailPage: محاولة إزالة الفيلم ${widget.movie.id} من المفضلة.");
-        await db.deleteFavorite(widget.movie.id); // تأكد أن هذه الدالة تعمل بشكل صحيح
+        await db.deleteFavorite(widget.movie.id);
         print("DetailPage: تم إزالة الفيلم ${widget.movie.id} بنجاح من المفضلة (قاعدة البيانات).");
 
         if (mounted) {

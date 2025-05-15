@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movie/pages/home_widget.dart'; // تأكد من صحة هذا المسار
+import 'package:movie/pages/home_widget.dart';
 
 void main() {
   runApp(MyApp());

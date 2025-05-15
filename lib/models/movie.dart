@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 class Movie {
   final int id;
@@ -35,7 +34,6 @@ class Movie {
     required this.popularity,
   });
 
-  /// ✅ تحويل إلى Map لتخزين في SQLite
   Map<String, dynamic> toMap() {
     final map = {
       'id': id,
@@ -46,7 +44,7 @@ class Movie {
       'releaseDate': releaseDate,
       'backdropPath': backdropPath,
       'originalLanguage': originalLanguage,
-      'genreIds': genreIds.join(','), // نحفظها كسلسلة نصية
+      'genreIds': genreIds.join(','),
       'adult': adult ? 1 : 0,
       'originalTitle': originalTitle,
       'mediaType': mediaType,
@@ -58,7 +56,6 @@ class Movie {
     return map;
   }
 
-  /// ✅ التحويل من SQLite
   factory Movie.fromMap(Map<String, dynamic> map) {
     return Movie(
       id: map['id'],
@@ -82,7 +79,6 @@ class Movie {
     );
   }
 
-  /// ✅ التحويل من JSON الخاص بـ TMDB API
   factory Movie.fromJson(Map<String, dynamic> json) {
     return Movie(
       id: json['id'],

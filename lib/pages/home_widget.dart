@@ -3,6 +3,7 @@ import '../models/movie.dart';
 import '../services/api_service.dart';
 import 'detail_widget.dart';
 import 'category_movies_widget.dart';
+import 'favorite_widget.dart';
 
 
 
@@ -42,7 +43,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
         _filteredMovies['الأعلى تقييماً'] = List.from(topRated);
         _filteredMovies['القادمة'] = List.from(upcoming);
 
-        // اختيار فيلم عشوائي للعرض في البانر
+
         if (popular.isNotEmpty) {
           _featuredMovie = popular[DateTime.now().millisecondsSinceEpoch % popular.length];
         }
@@ -141,7 +142,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
                 ),
               ),
             ),
-            // معلومات الفيلم
+
             Positioned(
               bottom: 30,
               right: 20,
@@ -447,25 +448,3 @@ class _MovieListScreenState extends State<MovieListScreen> {
   }
 }
 
-class MovieListScreenFavorite extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('الأفلام المفضلة', style: TextStyle(color: Colors.white)),
-          backgroundColor: const Color(0xFF14142B),
-          iconTheme: IconThemeData(color: Colors.white),
-        ),
-        body: Center(
-          child: Text(
-            'لم تتم إضافة أفلام إلى المفضلة بعد.',
-            style: TextStyle(color: Colors.white, fontSize: 18),
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
-    );
-  }
-}

@@ -34,7 +34,7 @@ class _MovieListScreenFavoriteState extends State<MovieListScreenFavorite> {
     loadMovies();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('❌ تم حذف "${movie.title}" من المفضلة'),
+        content: Text(' تم حذف "${movie.title}" من المفضلة'),
         backgroundColor: Colors.redAccent,
       ),
     );
